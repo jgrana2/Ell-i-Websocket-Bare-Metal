@@ -9,9 +9,9 @@ uint8_t deviceMAC[6] = { 0x00, 0xAA, 0xBB, 0xCC, 0xDE, 0x02 };
 // Router MAC (Unknown before ARP request)
 uint8_t routerMAC[6] = { 0xff, 0xff, 0xff, 0xff, 0xff, 0xff };
 // IP address of the enc28j60
-uint8_t deviceIP[4] = { 192, 168, 0, 200 };
+uint8_t deviceIP[4] = { 192, 168, 1, 33 };
 // IP address of the router
-uint8_t routerIP[4] = { 192, 168, 0, 1 };
+uint8_t routerIP[4] = { 192, 168, 1, 1 };
 
 uint8_t serverIP[4];
 

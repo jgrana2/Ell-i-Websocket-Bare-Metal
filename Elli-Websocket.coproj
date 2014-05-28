@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<Project version="2G - 1.7.6" name="Elli-Websocket">
+<Project version="2G - 1.7.6" name="blinky">
   <Target name="Elli-Websocket" isCurrent="1">
     <Device manufacturerId="9" manufacturerName="ST" chipId="249" chipName="STM32F051R8" boardId="" boardName=""/>
     <BuildOption>
@@ -33,7 +33,7 @@
           <Memory name="IROM2" type="ReadOnly" size="" startValue=""/>
           <Memory name="IRAM2" type="ReadWrite" size="" startValue=""/>
         </MemoryAreas>
-        <LocateLinkFile path="../../../../../../../coocox/coide/configuration/programdata/elli-websocket/arm-gcc-link.ld" type="0"/>
+        <LocateLinkFile path="../../../../../../../coocox/coide/configuration/programdata/blinky/arm-gcc-link.ld" type="0"/>
       </Link>
       <Output>
         <Option name="OutputFileType" value="0"/>
@@ -44,7 +44,7 @@
       </Output>
       <User>
         <UserRun name="Run#1" type="Before" checked="0" value=""/>
-        <UserRun name="Run#1" type="After" checked="0" value=""/>
+        <UserRun name="Run#1" type="After" checked="1" value="&quot;C:\Python27\python.exe&quot; &quot;C:\Users\Jose\SkyDrive\EC Master\EHealth Project\Sources\Python\stm32loader\stm32flash.py&quot; -w &quot;C:\Users\Jose\SkyDrive\EC Master\EHealth Project\Sources\Ell-i-Websocket-Bare-Metal\Elli-Websocket\Debug\bin\Elli-Websocket.hex&quot; COM4"/>
       </User>
     </BuildOption>
     <DebugOption>
@@ -78,35 +78,45 @@
   </Components>
   <Files>
     <File name="enc28j60/enc28j60.c" path="enc28j60/enc28j60.c" type="1"/>
-    <File name="stm32_lib/src/stm32f0xx_usart.c" path="stm32_lib/src/stm32f0xx_usart.c" type="1"/>
     <File name="base64" path="" type="2"/>
-    <File name="cmsis_boot/stm32f0xx_conf.h" path="cmsis_boot/stm32f0xx_conf.h" type="1"/>
-    <File name="cmsis_boot/startup/startup_stm32f0xx.s" path="cmsis_boot/startup/startup_stm32f0xx.s" type="1"/>
     <File name="cmsis_core/core_cmInstr.h" path="cmsis_core/core_cmInstr.h" type="1"/>
-    <File name="usart" path="" type="2"/>
+    <File name="led/led.h" path="led/led.h" type="1"/>
     <File name="ipstack/ipstack.c" path="ipstack/ipstack.c" type="1"/>
     <File name="clientSide/index.html" path="clientSide/index.html" type="1"/>
     <File name="cmsis_boot/system_stm32f0xx_temp.c" path="cmsis_boot/system_stm32f0xx_temp.c" type="1"/>
     <File name="cmsis_boot" path="" type="2"/>
-    <File name="cmsis_core/core_cmFunc.h" path="cmsis_core/core_cmFunc.h" type="1"/>
-    <File name="sha1/sha1.h" path="sha1/sha1.h" type="1"/>
-    <File name="sha1/platform.c" path="sha1/platform.c" type="1"/>
-    <File name="stm32_lib" path="" type="2"/>
     <File name="usart/usart.c" path="usart/usart.c" type="1"/>
     <File name="cmsis_boot/startup" path="" type="2"/>
-    <File name="cmsis_core" path="" type="2"/>
     <File name="base64/base64.c" path="base64/base64.c" type="1"/>
-    <File name="sha1/config.h" path="sha1/config.h" type="1"/>
+    <File name="cmsis_core" path="" type="2"/>
     <File name="stm32_lib/src/stm32f0xx_spi.c" path="stm32_lib/src/stm32f0xx_spi.c" type="1"/>
     <File name="stm32_lib/inc/stm32f0xx_gpio.h" path="stm32_lib/inc/stm32f0xx_gpio.h" type="1"/>
-    <File name="stm32_lib/inc" path="" type="2"/>
-    <File name="stm32_lib/inc/stm32f0xx_spi.h" path="stm32_lib/inc/stm32f0xx_spi.h" type="1"/>
     <File name="websocket/websocket.c" path="websocket/websocket.c" type="1"/>
     <File name="cmsis_boot/stm32f0xx.h" path="cmsis_boot/stm32f0xx.h" type="1"/>
     <File name="stm32_lib/inc/stm32f0xx_usart.h" path="stm32_lib/inc/stm32f0xx_usart.h" type="1"/>
-    <File name="websocket" path="" type="2"/>
+    <File name="led/led.c" path="led/led.c" type="1"/>
     <File name="cmsis_core/core_cm0.h" path="cmsis_core/core_cm0.h" type="1"/>
     <File name="clientSide/httpserver.py" path="clientSide/httpserver.py" type="1"/>
+    <File name="websocket/websocket.h" path="websocket/websocket.h" type="1"/>
+    <File name="sha1" path="" type="2"/>
+    <File name="enc28j60" path="" type="2"/>
+    <File name="sha1/sha1.c" path="sha1/sha1.c" type="1"/>
+    <File name="base64/base64.h" path="base64/base64.h" type="1"/>
+    <File name="stm32_lib/src/stm32f0xx_rcc.c" path="stm32_lib/src/stm32f0xx_rcc.c" type="1"/>
+    <File name="ipstack" path="" type="2"/>
+    <File name="stm32_lib/src/stm32f0xx_usart.c" path="stm32_lib/src/stm32f0xx_usart.c" type="1"/>
+    <File name="cmsis_boot/stm32f0xx_conf.h" path="cmsis_boot/stm32f0xx_conf.h" type="1"/>
+    <File name="cmsis_boot/startup/startup_stm32f0xx.s" path="cmsis_boot/startup/startup_stm32f0xx.s" type="1"/>
+    <File name="usart" path="" type="2"/>
+    <File name="sha1/platform.c" path="sha1/platform.c" type="1"/>
+    <File name="cmsis_core/core_cmFunc.h" path="cmsis_core/core_cmFunc.h" type="1"/>
+    <File name="sha1/sha1.h" path="sha1/sha1.h" type="1"/>
+    <File name="stm32_lib" path="" type="2"/>
+    <File name="led" path="" type="2"/>
+    <File name="sha1/config.h" path="sha1/config.h" type="1"/>
+    <File name="stm32_lib/inc" path="" type="2"/>
+    <File name="stm32_lib/inc/stm32f0xx_spi.h" path="stm32_lib/inc/stm32f0xx_spi.h" type="1"/>
+    <File name="websocket" path="" type="2"/>
     <File name="sha1/platform.h" path="sha1/platform.h" type="1"/>
     <File name="stm32_lib/inc/stm32f0xx_rcc.h" path="stm32_lib/inc/stm32f0xx_rcc.h" type="1"/>
     <File name="ipstack/ipstack.h" path="ipstack/ipstack.h" type="1"/>
@@ -114,16 +124,9 @@
     <File name="cmsis_boot/system_stm32f0xx.h" path="cmsis_boot/system_stm32f0xx.h" type="1"/>
     <File name="usart/usart 1.h" path="usart/usart 1.h" type="1"/>
     <File name="stm32_lib/src/stm32f0xx_gpio.c" path="stm32_lib/src/stm32f0xx_gpio.c" type="1"/>
-    <File name="websocket/websocket.h" path="websocket/websocket.h" type="1"/>
-    <File name="sha1" path="" type="2"/>
-    <File name="enc28j60" path="" type="2"/>
-    <File name="sha1/sha1.c" path="sha1/sha1.c" type="1"/>
     <File name="usart/usart.h" path="usart/usart.h" type="1"/>
-    <File name="base64/base64.h" path="base64/base64.h" type="1"/>
-    <File name="stm32_lib/src" path="" type="2"/>
-    <File name="stm32_lib/src/stm32f0xx_rcc.c" path="stm32_lib/src/stm32f0xx_rcc.c" type="1"/>
     <File name="clientSide" path="" type="2"/>
+    <File name="stm32_lib/src" path="" type="2"/>
     <File name="main.c" path="main.c" type="1"/>
-    <File name="ipstack" path="" type="2"/>
   </Files>
 </Project>
